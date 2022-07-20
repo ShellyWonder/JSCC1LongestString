@@ -8,9 +8,9 @@
 
 /*change logoFont with each project*/
 .logoFont {
-  font-family: ltc-broadway-engraved, sans-serif;
-  font-weight: 400;
-  font-style: normal;
+  font-family: bodega-serif, serif;
+    font-weight: 800;
+    font-style: normal;
 }
 
 main > .container {
@@ -32,26 +32,20 @@ h6 {
 .bg-dark {
   background-color: var(--sjw-background-color) !important;
 }
-
-.jsicon {
-  color: rgb(226, 211, 4);
-}
-
-.bsicon {
-  color: purple;
-}
-
-.htmlicon {
-  color: #ff4500;
-}
-
-.cssicon {
-  color: #0b52d6;
-}
-
-.checkListIcon {
-  color: var(--sjw-secondary-color);
-}
+ .heroName {
+   font-family: ccbiffbamboom, sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   color: #dbdbdb;
+   text-transform: uppercase;
+   background: -webkit-linear-gradient(#ececec, #0331ff);
+   -webkit-background-clip: text;
+   background-clip: text;
+   letter-spacing: 3px;
+   -webkit-text-fill-color: transparent;
+   -webkit-text-stroke: 2px;
+   -webkit-text-stroke-color: rgb(64, 2, 118);
+ }
 
 /*--button styles override Bootstrap styles--*/
 .btn.outline-primary {
@@ -78,14 +72,6 @@ h6 {
 .btn-primary:focus {
   filter: brightness(1.1) !important;
   border-color: var(--sjw-secondary-color);
-}
-
-.odd {
-  font-weight: 400;
-}
-
-.even {
-  font-weight: bold;
 }
 
 /*footer styles*/
