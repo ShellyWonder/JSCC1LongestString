@@ -1,54 +1,49 @@
-//CONTROLLER 
-function getValues() {
+const marvelHeroes = [
+    "Ant-Man",
+    "Black Panther",
+    "Black Widow",
+    "Captain America",
+    "Doctor Strange",
+    "Hawkeye",
+    "Hulk",
+    "Iron Man",
+    "Luke Cage",
+    "Moon Knight",
+    "Ms. Marvel",
+    "Scarlet Witch",
+    "Spider-Man",
+    "Thor",
+    "Wasp"
+]
+//driver function used for display and passing values.
+function findHero() {
+
+    //implement the function findLongestString that returns the longest word.
+    let lword = findLongestString(marvelHeroes);
+
+    //used for display. 
+    document.getElementById("results").innerHTML = lword;
+
+    
 
 }
-//PROGRAM ENTRY POINTS
-function getValues2() {
-  let startValue = document.getElementById("startValue").value;
-  let endValue = document.getElementById("endValue").value;
 
-  //VALIDATION
-  startValue = parseInt(startValue);
-  endValue = parseInt(endValue);
-
-  //check to see if input is integer
-  if (Number.isInteger(startValue) && Number.isInteger(endValue)) {
-    //generate list of numbers
-    let numbers = generateNumbers(startValue, endValue);
-    displayNumbers(numbers);
-  } else {
-    Swal.fire({
-      icon: "error",
-      title: "oops",
-      text: "only integers are allowed for JS Speedway"
-    })
+//takes an array of strings and returns the longest one. 
+function findLongestString(namesArray) {
+   //remove special characters and spaces
+    let regex = /[^a-z0-9]/gi;
+    namesArray = namesArray.replace(regex, "");
+  for (let i = 0; i < namesArray.length; i++) {
+    let newName = namesArray[i];
+    let newHeroesList = [];
+     if (newName.length > lword.length) {
+       lword = newName;
+       newHeroesList.unshift(newName);
+     } else {
+      newHeroesList.shift(newName);
+     }
   }
-}
 
-function generateNumbers(start, end) {
-  let numbers = [];
-  for (let index = start; index <= end; index++) {
-    numbers.push(index);
-  }
-  return numbers;
-}
+    return findLongestString();
 
-function displayNumbers(numbers) {
-
-  let templateRows = "";
-  let className = "even";
-  for (let index = 0; index < numbers.length; index++) {
-
-    let number = numbers[index];
-
-    if (number % 2 === 0) {
-      className = "even";
-
-    } else {
-      className = "odd";
-    }
-    let row = `<tr><td class="${className}">${number}</td></tr>`;
-    templateRows += row;
-  }
-  document.getElementById("results").innerHTML = templateRows;
 }
