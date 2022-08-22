@@ -107,12 +107,11 @@
         </div>
         <!--CODE EXPLANATION-->
         <div class="col-lg-4">
-          <p>The code is structured in three functions.</p>
+          <p>The code is structured in two functions.</p>
           <!--CHANGE THIS LINK-->
           <h5 class="logoFont">The Longest String</h5>
           <p>
-            .JS Speedway is a simple program looping input integers and displaying them to the page. Even numbers are
-            bolded.
+            The Longest String is a simple program looping strings in an array to find the longest one and displaying all to to the page in decending order. 
           </p>
           <h4>Brief code overview:</h4>
           <ul>
@@ -121,32 +120,25 @@
                 <li>event listener (located in the bottom &lt;script&gt; tag) is triggered by a "click" on the "submit"
                   button.
                 </li><br>
-                <li>Inputs from the two user fields ("Start Value" and "End Value") are passed into the "Get Values"
-                  function.</li><br>
+               
               </ul>
 
             </li>
             <li>Validation:
               <ul>
-                <li>Inputs are checked to make certain they are integers (numbers) and not strings.</li> <br>
-
-                <li>If inputs are numbers treated as strings, the program parses them to integers.</li><br>
-                <li>If inputs are text, the system will alert the user, "Only integers are allowed for JS Speedway."
-                </li> <br>
+                <li>Since there are no user inputs, Validation is not needed.</li> <br>
+  
               </ul>
             </li>
             <li>Logic:
-              <p>Within the "Generate Numbers" function, the following processes occur:
+              <p>Within the "Find Longest String" function, the following processes occur:
               </p>
               <ul>
-                <li>the "numbers" array is created</li> <br>
+                <li>the "lString" array is created</li> <br>
 
-                <li>the "for" loop passes the start value and increments the number by one. </li><br>
-                <li>the produced number is pushed to the "numbers" array.</li><br>
-
-                <li>Meanwhile, produced numbers are re-introduced into the loop until the incremented number is equal to
-                  the End Value.</li><br>
-                <li>the function returns the "numbers" array.</li><br>
+                <li>the "for" loop iterates through the index comparing it to the namesArray's length and incrementing by one. </li><br>
+                <li>A "greater than" namesArray index replaces  the current "lString" string value .</li><br>
+                <li>the function returns the ending value of "lString".</li><br>
               </ul>
 
             </li>
@@ -157,17 +149,10 @@
           <ul>
             <li>Display:
               <ul>
-                <li>Inside the "for" loop: </li> <br>
-                <ul>
-                  <li>A boolean tests each number in the "numbers" array by dividing each number by 2 to determine
-                    whether the number is even. </li><br>
-                  <li>Numbers testing "true" are bolded.</li><br>
-                  <li>Numbers testing "false" are not bolded.</li><br>
-                </ul>
-                <li> "Template Rows" variable injects the "Number" variable (from the "Display Numbers" function) into
-                  the template literal. </li><br>
-                <li>Finally, "Template Rows" are published to the HTML via the "results" class.</li><br>
-              </ul>
+                <li>The Hero representing the longest string is presented to the HTML via the "results" class.</li><br>
+                <li>The rest of the Heroes are presented to the HTML via the "nameList" class.</li><br>
+             </ul>
+            </li>
           </ul>
           </li>
           </ul>
