@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" class="h-100">
   <head>
-    <title>Longest String: A Coding Project by SJ Wonder</title>
+    <title>The Longest String: A Coding Project by SJ Wonder</title>
     <!-- Required meta tags -->
     <meta charset="utf-8" />
     <meta
@@ -65,7 +65,7 @@
               <a
                 class="nav-link"
                 target="_blank"
-                href="https://github.com/ShellyWonder/js_speedway2022"
+                href="https://github.com/ShellyWonder/JSCC1LongestString"
                 >Git Repo</a
               >
             </li>
@@ -82,53 +82,52 @@
       </div>
     </nav>
     <!--Main section-->
-    <main class="flex-shrink-0">
-      <div class="container col-xxl-8 px-4 py-5">
-        <div class="row g-5 py-5 row-cols-1 row-cols-lg-2">
-          <div class="col order-last order-lg-first">
-            <h1 class="display-5 1h-1 mb-3">
-              <span class="logoFont">The Longest String</span>: A Coding
-              Challenge
-            </h1>
-            <h4 class="lead">brief description</h4>
-            <p>
-              FUN FACT:
-              <span class="text-black">
-                Even numbers are displayed as<strong> BOLD.</strong></span
-              >
-            </p>
+    <main class="container-fluid h-100 px-5">
+        <div class="row">
+            <div class="col-12 col-md-6">
+                <h1 class="logoFont">The Longest String</h1>
+                <p class="lead">Given an array of marvel heroes, write a function that accepts the array of names (strings).
+                    <br> The function should return the hero with the longest name. <br> The user should click the
+                    button to display the heroes name below.</p>
+                <p><h3>List of Heroes</h3>
+                    <code>
+                        [
+                        "Ant-Man",
+                        "Black Panther",
+                        "Black Widow",
+                        "Captain America",
+                        "Doctor Strange",
+                        "Hawkeye",
+                        "Hulk",
+                        "Iron Man",
+                        "Luke Cage",
+                        "Moon Knight",
+                        "Ms. Marvel",
+                        "Scarlet Witch",
+                        "Spider-Man",
+                        "Thor",
+                        "Wasp"
+                    ]
+                    </code></p>
+                <p><strong>Extra Credit:</strong><em> Find an attractive way to display the entire list of names below
+                        the longest name.</em></p>
 
-            <div>
-              <button
-                id="btnSubmit"
-                type="button"
-                class="btn btn-primary btn-lg px-4 me-md-2"
-              >
-                Your Hero!
-              </button>
+                <button id="btnSubmit" type="button" class="btn btn-warning">Display Hero</button>
             </div>
             <div class="col-12 col-md-6 order-first order-md-2">
-              <img
-                src="/img/codersATWork.png"
-                class="img-fluid"
-                alt="Coders at Work logo"
-              />
+                <img src="/img/codersATWork.png" alt="Coders at Work image"  class="img-fluid">
             </div>
+            <div class="col-12 order-last mt-4 mb-2">
+                <div id="results" class="logoFont display-6">
+                    Hero Name Appears Here
+                </div>
+                <div id="nameList">
+                  Rest of the Names Appear Here
 
-            <div class="col-12 col-md-6 order-last mt-4 mb-2">
-              <div id="results" class="heroName display-6">
-                Hero's Name Goes Here
-              </div>
+                </div>
             </div>
-          </div>
-
-          <div class="col">
-            <div class="col d-flex align-content-center">
-              width="700" height="500" />
-            </div>
-          </div>
         </div>
-      </div>
+
     </main>
     <!--footer section-->
     <footer class="footer mt-auto py-3 bg-dark sticky-footer">
@@ -181,7 +180,7 @@
       integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
       crossorigin="anonymous"
     ></script>
-    <script src="/Challenge01/site01.js"></script>
+    <script src="/js/site.js"></script>
     <script>
       document.getElementById("btnSubmit").addEventListener("click", findHero);
     </script>
