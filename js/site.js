@@ -19,12 +19,14 @@ const marvelHeroes = [
 function findHero() {
   
     //implement the function findLongestString that returns the longest word.
-    let lword = findLongestString(marvelHeroes);
-
+  let lword = findLongestString(marvelHeroes);
+  //Sorts entire array and puts Heroes into descending order by length
+  marvelList = marvelHeroes.sort((a, b) => b.length - a.length);
+  
     //used for display. 
    document.getElementById("results").innerHTML = lword;
 //displays rest of names in the array
- document.getElementById("nameList").innerHTML = marvelHeroes.join(" | ");
+ document.getElementById("nameList").innerHTML = marvelList;
    
   }
 
